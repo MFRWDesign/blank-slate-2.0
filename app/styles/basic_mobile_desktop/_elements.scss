@@ -1,0 +1,91 @@
+// ==========================================================
+
+// Blank-Slate
+// Version: 1.0
+// URL: github.com/infinitedesign/blank-slate
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Elements =================================================== */
+
+// FIGURES & IMAGES =============================================================================
+
+.end-section {
+  margin-bottom: $baselineheight;
+}
+
+hr {
+  display : block;
+  margin : 1em 0;
+  padding : 0;
+  height : 1px;
+  border : 0;
+  border-top : 1px solid $bordercolor;
+  border-bottom : 1px solid $white; }
+
+// img
+
+img {
+  // TODO: Considering adding  height: auto;
+  max-width : 100%;
+  border-width : 0;
+  vertical-align : middle;
+  -ms-interpolation-mode : bicubic; }
+
+svg:not(:root) {
+  overflow : hidden; }
+
+// figure
+
+figure {
+  margin-bottom : $baselineheight;
+  img {
+    margin-bottom : $baselineheight / 4; }
+  figcaption {
+    display : block;
+    font-weight : normal;
+    @include font-size(14);
+    color : $grey; } }
+
+// list-bordered
+
+.list-bordered {
+  list-style-type : none;
+  margin : 0 0 $baselineheight 0;
+  padding : 0;
+  li {
+    margin-bottom : $baselineheight / 4;
+    padding-bottom : $baselineheight / 4;
+    border-bottom : 1px dashed $bordercolor; }
+  li:last-child {
+    margin-bottom : 0;
+    padding-bottom : 0;
+    border-bottom-width : 0; } }
+
+// #elsewhere icon elements
+
+.delicious {
+  background-image: url("../images/delicious.png");
+  background-repeat: no-repeat;
+  background-position: middle; }
+
+.tumblr {
+  background-image: url("../images/tumblr.png");
+  background-repeat: no-repeat;
+  background-position: middle; }
+
+.slideshare {
+  background-image: url("../images/slideshare.png");
+  background-repeat: no-repeat;
+  background-position: middle; }
+
+.twitter {
+  background-image: url("../images/twitter.png");
+  background-repeat: no-repeat;
+  background-position: middle; }
+
+.github {
+  background-image: url("../images/github.png");
+  background-repeat: no-repeat;
+  background-position: middle; }

@@ -20,6 +20,10 @@ guard 'livereload' do
   watch(%r{app/images/.+\.(png|gif|jpg|jpeg|PNG|GIF|JPG|JPEG|tiff|TIFF|pdf|PDF)})
   watch(%r{app/images/.+/.+\.(png|gif|jpg|jpeg|PNG|GIF|JPG|JPEG|tiff|TIFF|pdf|PDF)})
 
+  # watch(%r{app/templates/nanoc/nanoc.yaml}) # Change this to config.yaml if you use the old config file name
+  # watch(%r{app/templates/nanoc/Rules})
+  # watch(%r{app/templates/nanoc/^(content|layouts|lib)/.*$})
+
   # watch(%r{config/locales/.+\.yml})
 
   # Rails Assets Pipeline

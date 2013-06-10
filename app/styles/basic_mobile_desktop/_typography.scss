@@ -1,0 +1,298 @@
+// ==========================================================
+
+// Blank-Slate
+// Version: 1.0
+// URL: github.com/infinitedesign/blank-slate
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Typography =================================================== */
+
+// HEADINGS ====================================================
+
+#{headings()} {
+  margin : 0;
+  font-family : $baseheadingfont;
+  font-weight : $baseheadingfontweight;
+  color : $baseheadingfontcolor;
+  text-rendering : optimizelegibility; }
+
+h1 small,
+h2 small {
+  font-weight : normal;
+  color : $lightgrey; }
+
+h1,
+.h1 {
+  margin-bottom : $baselineheight / 2;
+  @include font-size(32);
+  line-height : 1.2; }
+
+h2,
+.h2 {
+  margin-bottom : $baselineheight / 2;
+  @include font-size(24);
+  line-height : 1.2; }
+
+h3,
+.h3 {
+  margin-bottom : $baselineheight / 1.5;
+  @include font-size(21);
+  line-height : 1.3; }
+
+h4,
+.h4 {
+  margin-bottom : $baselineheight;
+  @include font-size(18);
+  line-height : 1.25; }
+
+h5,
+.h5 {
+  @include font-size(16);
+  margin-bottom : $baselineheight; }
+
+h6,
+.h6 {
+  margin-bottom : $baselineheight;
+  @include font-size(14);
+  font-weight : normal;
+  letter-spacing : 1px;
+  text-transform : uppercase; }
+
+// header
+
+.table-title {
+    margin-bottom: 0; }
+.header h1,
+.header h2,
+.header h3 {
+  float : left;
+  margin-right : $gutterwidth;
+  a {
+    display : block;
+    position : relative;
+    top : 6px;
+    float : right;
+    padding : 4px 12px;
+    @include font-size(14);
+    background-color : lighten($basecolor, 75%); }
+  &:hover {
+    background-color : lighten($basecolor, 75%); } }
+
+.header .a-rss,
+.header .a-rss:hover {
+  float : left;
+  width : 16px;
+  height : 16px;
+  padding : 0;
+  background : transparent url(../img/a-rss.png) no-repeat 0 0;
+  @include hide-text(); }
+
+// TYPOGRAPHY ====================================================
+
+p,
+ol,
+ul,
+dl,
+address {
+  margin-bottom : $baselineheight;
+  @include font-size(14);
+  line-height : $baselineheight; }
+
+small {
+  @include font-size(14); }
+
+ul,
+ol {
+  margin : 0 0 $baselineheight #{-$gutterwidth};
+  padding : 0 0 0 $gutterwidth; }
+
+li ul,
+li ol {
+  margin : 0;
+  @include font-size(16); }
+
+// Added from from basic.scss
+ol {
+  li {
+    padding: 0 0 0.5em 0;
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside; } }
+ul {
+  li {
+    padding: 0 0 0.5em 0;
+    margin: 0 0.3em 0 1em;
+    list-style-type: disc;
+    list-style-position: outside; }
+  &.summary {
+    margin-left: 0;
+    li {
+      padding: 0 0 1em 0;
+      margin: 1em 0 0 0;
+      list-style-type: none;
+      border-bottom: 1px dotted #ababab; } }
+  &.highlight {
+    margin-left: 0;
+    li {
+      padding: 0 0 1em 0;
+      margin: 1em 0 0 0;
+      list-style-type: none;
+      border-bottom: 1px dotted #ababab;
+      h3 {
+        font-size: 1.2em;
+        clear: both;
+        padding-top: 0.5em; }
+      img {
+        background-color: #fff;
+        padding: 0.4em;
+        float: left;
+        margin: 0 1.2em 0 0; }
+      p {
+        margin: 0 0 0.3em 0; } } } }
+// end added from basic.scss
+
+// blockquote
+
+blockquote  {
+  margin : 0 0 $baselineheight #{-$gutterwidth};
+  padding-left : $gutterwidth;
+  border-left : 2px solid $bordercolor;
+  font-family : $altfont;
+  font-style : normal;
+  // Added from basic.scss
+  overflow: hidden;
+  &:before {
+    content: "\201C";
+    font-size: 230%;
+    float: left;
+    margin: -0.2em 0 0 0.2em; }
+  p {
+    padding: 0 1.4em 0 2em;
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: #575756;
+    cite {
+      font-size: 1em;
+      font-style: italic;
+      &:before {
+        content: "\2014"; } } } }
+  // end added from basic.scss
+
+q {
+  quotes : none; }
+
+q:before,
+q:after {
+  content : '';
+  content : none; }
+
+cite {
+  font-style : normal; }
+
+// definition lists
+
+dl,
+dd {
+  margin-bottom : $baselineheight;  }
+
+dt {
+  font-weight : bold; }
+
+.dl-horizontal {
+  dt {
+    float : left;
+    clear : left;
+    width : 20.25%;
+    text-align : right; }
+  dd {
+    margin-left : 22.78%; } }
+
+// Added from basic.scss
+dl {
+  &.dialogue {
+    dt {
+      margin: 15px 0 0 10%;
+      text-transform: uppercase; }
+    dd {
+      width: 85%;
+      margin: 0 0 0 3%; }
+    .description {
+      font-style: italic; } }
+  &.definition {
+    dt, dd {
+      padding: 0;
+      margin: 0;
+      display: inline; }
+    dt {
+      font-style: italic;
+      &:after {
+        content: ":"; } }
+    dd {
+      span {
+        &:before {
+          content: "\201C"; }
+        &:after {
+          content: "\201D\00a0"; } }
+      a {
+        font-style: italic; } } } }
+// end added from basic.scss
+
+// text-level
+
+abbr[title] {
+  border-bottom : 1px dotted $bordercolor;
+  cursor : help; }
+
+b, strong {
+  font-weight : bold; }
+
+dfn {
+  font-style : italic; }
+
+ins {
+  background-color : lighten($basecolor, 75%);
+  color : $textcolor;
+  text-decoration : none; }
+
+mark {
+  background-color : lighten($basecolor, 75%);
+  color : $textcolor;
+  font-style : italic;
+  font-weight : bold; }
+
+pre,
+code,
+kbd,
+samp {
+  font-family : $codefont;
+  @include font-size(14);
+  line-height : $baselineheight; }
+
+pre {
+  white-space : pre;
+  white-space : pre-wrap;
+  word-wrap : break-word; }
+
+code {
+  border: 1px dashed #ccc;
+  background: white url("../images/clipping.png") no-repeat right bottom;
+  .element, .tag {
+    color: blue; }
+  .attribute {
+    color: red; }
+  .text {
+    color: grey; } }
+
+sub,
+sup {
+  position : relative;
+  @include font-size(12);
+  line-height : 0;
+  vertical-align : baselineheight; }
+
+sup {
+  top : -0.5em; }
+
+sub {
+  bottom : -0.25em; }

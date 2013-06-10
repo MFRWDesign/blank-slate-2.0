@@ -1,7 +1,10 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
-        bootstrap: 'vendor/bootstrap'
+        bootstrap: 'vendor/bootstrap',
+        html5MBPhelper: '../bower_components/html5-mobile-boilerplate/js/helper',
+        html5MBPplugins: '../bower_components/html5-mobile-boilerplate/js/plugins',
+        selectivizr: '../bower_components/selectivizr/selectivizr'
     },
     shim: {
         bootstrap: {
@@ -11,7 +14,7 @@ require.config({
     }
 });
 
-require(['app', 'jquery', 'bootstrap'], function (app, $) {
+require(['app', 'jquery', 'bootstrap', 'html5MBPhelper', 'html5MBPplugins', 'selectivizr'], function (app, $) {
     'use strict';
     // use app here
     console.log(app);

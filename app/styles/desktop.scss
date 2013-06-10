@@ -1,0 +1,257 @@
+/* desktop.css Stylesheet */
+
+/* import */
+
+// Styles for Everything above basic
+@import "advanced";
+
+/* fonts */
+/* Museo */
+/*
+@font-face {
+  font-family: 'Museo';
+  src: url("fonts/museo/museo700-regular.eot");
+  src: local("☺"), url("fonts/museo/museo700-regular.woff") format("woff"), url("fonts/museo/museo700-regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo';
+  src: url("fonts/museo/museo500-regular.eot");
+  src: local("☺"), url("fonts/museo/museo500-regular.woff") format("woff"), url("fonts/museo/museo500-regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo';
+  src: url("fonts/museo/museo300-regular.eot");
+  src: local("☺"), url("fonts/museo/museo300-regular.woff") format("woff"), url("fonts/museo/museo300-regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+*/
+
+/* layout */
+
+body {
+  // background-image: url("../images/work-in-progress.png");
+  // background-position: top right;
+  // background-repeat: no-repeat;
+  > {
+    header {
+      height: 2.7em;
+      margin: 0 auto 1em auto;
+      h1 {
+        width: 8.5em;
+        float: left; }
+      nav {
+        clear: none;
+        margin: .3em 0 0 1.2em;
+        padding: 0;
+        float: right;
+        display: block;
+        overflow: hidden;
+        ul {
+          display: block;
+          width: 100%; }
+        li {
+          float: left;
+          display: block;
+          margin: 0 1em 0 0;
+          padding: 0 1em 0 0;
+          font-size: 1em;
+          font-weight: 300;
+          font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
+          border-right: 1px #666 solid;
+          &:hover a {
+            color: #658e15; }
+          a {
+            width: 100%;
+            display: block; }
+          &.current {
+            font-weight: 300;
+            a {
+              color: #658e15; } }
+          &:last-child {
+            border: none; } } }
+      form#search {
+        clear: right;
+        float: right;
+        margin: 0 0 0 4%;
+        width: 31%;
+        margin-left: 1em; } }
+    article > * {
+      width: 65%; } }
+  article aside {
+    clear: right;
+    float: right;
+    margin: 0 0 0 4%;
+    width: 31%; }
+  > footer section {
+    float: left;
+    width: 28%;
+    &#about {
+      margin-right: 5%; }
+    &#contact {
+      clear: right;
+      float: right;
+      margin: 0 0 0 4%;
+      width: 31%;
+      span {
+        &.email, &.tel, &.adr {
+          display: block; } } } } }
+
+article {
+  &.detail header {
+    width: 100%;
+    height: 12.5em;
+    background-image: $splash-d-url;
+    background-position: top left;
+    border: none;
+    h2 {
+      margin: 6.5em 0 0 1.0em;
+      display: inline-block;
+      background-color:#000;
+      padding: 0.25em .5em;
+      color: #fff;
+      font-weight: 500; } }
+  &.feature {
+    margin-bottom: 1.5em;
+    h2 {
+      margin: .7em 0 .2em 0;
+      text-align: center; }
+    p {
+      margin: 0 2em 1em 2em;
+      text-align: center;
+      font-size: 1.1em;
+      color: #575756; }
+    img {
+      background: #f5f5f5; } }
+  &.highlight {
+    width: 32%;
+    display: block;
+    float: left;
+    margin: 0 2% 0 0;
+    &:last-child {
+      margin-right: 0; }
+    img {
+      padding: 4px;
+      background-color: white; }
+    h3 {
+      font-size: 1.2em;
+      padding: .3em .2em .5em .3em;
+      margin: 0; }
+    p {
+      padding: 0 .2em 0 .3em;
+      margin: 0 0 0.2em 0; }
+    ul li {
+      font-size: .9em; } }
+  &.alert {
+    background: #ebebe2 url("arrow.png") 0.4em 0.3em no-repeat;
+    p {
+      padding-left: 2.2em; } } }
+
+/* content elements */
+
+ul.highlight li h3 {
+  clear: none;
+  padding-top: 0; }
+
+/* components */
+
+#breadcrumbs {
+  margin: 0 0 1em 0;
+  p {
+    font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif; } }
+
+#pagination {
+  ul {
+    width: 60%; }
+  li.previous {
+    float: left; } }
+
+#biography img {
+  background-color: #fff;
+  padding: .4em;
+  margin: 0 .4em .6em 0; }
+
+/*not in use
+section#featured {
+  clear: both;
+  float: left;
+  margin: 0;
+  width: $column-main - $column-margin;
+  margin-right: $column-margin; }
+
+section#etcetera {
+  width: $column-misc;
+  margin: 0 0 0 $column-main + $column-margin;
+  vertical-align: top; }
+*/
+
+/* design */
+
+body > header {
+  h1 {
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 2px 3px #999;
+    -moz-box-shadow: 0px 2px 3px #999;
+    -webkit-box-shadow: 0px 2px 3px #999; }
+  input[type="submit"] {
+    font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
+  font-weight: 500; }
+
+ul li {
+  margin: 0 .5em 0 2em; }
+
+aside {
+  font-size: 90%;
+  &.contents {
+    h4 {
+      font-size: .9em;
+      color: #252524;
+      border-bottom: none;
+      font-family: Helvetica, Arial, sans-serif; }
+    ul {
+      font-size: .8em;
+      padding: 0;
+      border-bottom: none;
+      li {
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 1.8em;
+        border-bottom: 1px dotted #ababab;
+        a {
+          width: 100%;
+          display: block; }
+        &:hover {
+          background-color: white; } } } } }
+
+div.note p {
+  font-size: .9em;
+  padding: .6em 1.5em .6em 1.2em; }
+
+.noteworthy {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ababab;
+  background: url("../images/search.png") no-repeat 0px 2px;
+  margin-left: -20px;
+  padding-left: 20px; }
+
+// 768px
+@media only screen and (min-width: 768px) {
+  @import "basic_mobile_desktop/768"; }
+
+// 992px
+@media only screen and (min-width: 992px) {
+  @import "basic_mobile_desktop/992"; }
+
+// 1024px
+@media only screen and (min-width: 1024px) {
+  @import "basic_mobile_desktop/1024"; }
+
+// 1382px
+@media only screen and (min-width: 1382px) {
+  @import "basic_mobile_desktop/1382"; }
