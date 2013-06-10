@@ -1,0 +1,72 @@
+---
+title: Home
+---
+
+<article class="detail wrap" id="top">
+  <!-- breadcrumbs currently disabled -->
+  <!--
+  <nav id="breadcrumbs">
+      <p><a href="/homepage/">Home</a>&nbsp;&gt;&nbsp;<a href="../">About</a>&nbsp;&gt;&nbsp;About this site...</p>
+  </nav>
+  -->
+
+  <header>
+        <h2><%= @site.config[:sec0_heading] %></h2>
+  </header>
+
+  <%= render 'contents' %>
+
+  <h3><%= @site.config[:sec0_slogan] %></h3>
+  <p>Today's web is dynamic. The desktop-centric designs that dominated the web only a few years ago are becoming obsolete. Tablets. Phones. E-Readers. Laptops. A myriad of different resolutions and screen sizes.</p>
+  <p>These are no longer simply websites. These are <strong>dynamic web experiences</strong>.</p>
+
+  <h3>The Technology</h3>
+  <p>This website is a hybrid of several technologies. We've taken the best from responsive web design and combined it with cutting edge techniques like progressive enchancement, media queries, and device detection. Some of our tools and influences are:</p>
+  <ul>
+      <li>Yeoman</li>
+      <li>Nanoc</li>
+      <li>Yiibu</li>
+      <li>320andUp</li>
+  </ul>
+
+  <aside>
+    <div class="note blue">
+      <p>
+        The hybrid is an amalegom of Yeoman, nanoc, Yiibu, and 320andUp. Progressive Enhancement Mobile First Responsive Web Design creates <em>Beautiful</em> Web Experiences.
+      </p>
+    </div>
+  </aside>
+
+  <h3>The Process</h3>
+  <p>Our design process starts with mobile first. Only the essentials. By identifying what is truly important to your users, we eliminate waste. Pages load faster. Conversion rates go up. Customers are happpy.</p>
+  <h3>Next</h3>
+  <p>Adding eye-catching visuals is easy when you've identified what's important. Instead of trying to fit more and more into a smaller and smaller screen. We add more features only when the device and screen size allows.</p>
+
+  <aside>
+    <div class="note red">
+      <p>The result is simple: Beautiful Responsive Web Experiences.</p>
+    </div>
+  </aside>
+
+  <h3>Awesome</h3>
+  <p>There's no point creating something that only looks good on a PC. Mobile Traffic has been growing at a pace of 150% per Year. This trendline will likely hold or even accelerate:</p>
+
+  <h4 class="table-title">Global Mobile Traffic as % of Total Internet Traffic</h4>
+  <img class="end-section" src="<%= @item[:level] %>images/mobile-traffic.jpg" alt="Mobile Traffic Trends" />
+
+  <aside>
+    <div class="note blue">
+      <p>The above graph is displayed for informational purposes only.</p>
+    </div>
+  </aside>
+
+  <h3>Constantly Learning</h3>
+  <p>Here at infiniteDesign we truely recognize the importance on constant improvement. Always on the look out for new technology, we strive to stay on the cutting edge of the mobile-first responsive web. Have a tip you'd like to share with us? We'd always love your input.</p>
+
+  <h3>Supported browsers and devices</h3>
+  <p>At the moment we can confidently state that this site works beautifully on most modern smartphones, many legacy smartphones, and most tablets and desktop browsers.</p>
+  <p>Spreadsheet Log:  <a href="http://spreadsheets.google.com/ccc?key=0AglzInh14B_-dFZsaHA5SmllX0dlVmUtaEpVLWNhbVE&hl=en">a log  of all supported browsers</a>.</p>
+
+  <%= render 'related' %>
+
+</article>

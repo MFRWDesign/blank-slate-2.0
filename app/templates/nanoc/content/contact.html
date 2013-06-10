@@ -1,0 +1,46 @@
+---
+title: Contact
+level: ../
+---
+<article class="detail wrap" id="top">
+  <!-- breadcrumbs currently disabled -->
+  <!--
+  <nav id="breadcrumbs">
+      <p><a href="/homepage/">Home</a>&nbsp;&gt;&nbsp;<a href="../">About</a>&nbsp;&gt;&nbsp;About this site...</p>
+  </nav>
+  -->
+
+  <header>
+        <h2><%= @site.config[:sec2_heading] %></h2>
+  </header>
+
+  <%= render 'contents' %>
+
+  <h3><%= @site.config[:sec2_slogan] %></h3>
+  <aside>
+    <div class="note blue">
+      <p>
+        Email is usually your best bet for a quick response.</a>
+      </p>
+    </div>
+  </aside>
+  <p>Email, call, or fill out the form below and we'll get back to you as soon as possible.</p>
+  <p><a href="mailto:<%= @site.config[:email] %>?subject=Hello There"><%= @site.config[:email] %></a></p>
+  <p><a href="tel:<%= @site.config[:phonelink] %>"><%= @site.config[:phone] %></a></p>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+
+  <%= render 'related' %>
+
+</article>
